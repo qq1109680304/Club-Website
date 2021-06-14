@@ -1,5 +1,7 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from .models import AboutPage
 
-# Create your views here.
-def index(request):
-    return HttpResponse("The ABOUT page.")
+def about_page(request):
+    about = AboutPage.objects.all()
+    context = {'about': about}
+    return render(request, 'about/about.html', context)

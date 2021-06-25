@@ -1,17 +1,13 @@
 {% load static %}
 <!DOCTYPE HTML>
 <html>
-<head>
-    <title>Mt.Sac CompSci Clubs</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-</head>
-<body class="darkThemeBody">
-    {% include 'header.html' %}
-    <div class="centerContainer">
-        <div class="child">
-            <h1 class="largeCenterText">WELCOME</h1>
-            <p class="centerContainer">The purpose of this website is to link all of Mount Sac's computer science clubs together so they're easy to find.</p>
-            <p class="centerContainer">More info soon...</p>
-        </div>
-</body>
+    <head>
+        <title>Mt.Sac CompSci Clubs</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/test_style.css' %}">
+    </head>
+    <body class="darkThemeBody">
+        {% include 'header.html' %}
+        {% block main %}{% endblock main %}
+        {% include 'footer.html' %}
+    </body>
 </html>

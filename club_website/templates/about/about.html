@@ -1,22 +1,18 @@
+{% extends "index.html" %}
 {% load static %}
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Mt.Sac CompSci Clubs</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-</head>
-<body class="darkThemeBody">
-    {% include 'header.html' %}
-    <div class="centerContainer">
-        {% for about in about %}
-        <div class="child">
-            <h1 class="largeCenterText">{{ about.title1 }}</h1>
-            <p class="centerContainer">{{ about.text1 }}</p>
-            <h1 class="largeCenterText">{{ about.title2 }}</h1>
-            <p class="centerContainer">{{ about.text2 }}</p>
-            <h1 class="largeCenterText">{{ about.title3 }}</h1>
-            <p class="centerContainer">{{ about.text3 }}</p>
-        </div>
-        {% endfor %}
-</body>
-</html>
+{% block main %}
+{% for about in about %}
+
+<div class="centerContainer">  
+    <div class="child">
+        <h1 class="largeCenterText">{{ about.title1 }}</h1>
+        <p class="centerContainer">{{ about.text1 }}</p>
+        <h1 class="largeCenterText">{{ about.title2 }}</h1>
+        <p class="centerContainer">{{ about.text2 }}</p>
+        <h1 class="largeCenterText">{{ about.title3 }}</h1>
+        <p class="centerContainer">{{ about.text3 }}</p>
+    </div>
+</div>
+
+{% endfor %}
+{% endblock main %}

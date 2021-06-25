@@ -1,7 +1,25 @@
 .darkThemeBody {
-    background-color: rgb(175, 175, 175);
+    background-color: rgb(54, 54, 54);
     color: white;
 }
+
+.navbar {
+    overflow: hidden;
+    background-color: rgb(30, 30, 30);
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
 .largeText {
     font-size: 400%;
 }
@@ -26,4 +44,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
 }
